@@ -1,5 +1,9 @@
 '''
 Code: Time Shifting for DSP
+      The function time_function depends to the given by the professor by default piece-wise functions.
+      The time shifting_function accepts only the input which n and the offset k. 
+      if k+ -> the signal advance
+      if k- -> the signal delays
 '''
 
 
