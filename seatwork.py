@@ -30,6 +30,5 @@ if __name__ == "__main__":
     time_function_list = list()
     for i in range(-3,4):
         time_function_list.append(time_folding(i,0))
-    p
-    res = time_shifting(time_function_list,3)
+    res = delay_time_shifting(time_function_list,3)
     print(f'shifted function {res}')
