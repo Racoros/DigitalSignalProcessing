@@ -24,11 +24,11 @@ def advance_time_shifting(n, k):
     return n[:k]
 
 def time_folding(n, k):
-    return time_function((-1*n) + k)
+    return n[-(k+1)::-1]
 
 if __name__ == "__main__":
-    time_function_list = list()
+    out = list()
     for i in range(-3,4):
-        time_function_list.append(time_folding(i,0))
-    res = delay_time_shifting(time_function_list,3)
-    print(f'shifted function {res}')
+        out.append(time_function(i))
+    print(out)
+    print(time_folding(out,-4))
