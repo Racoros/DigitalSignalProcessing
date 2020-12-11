@@ -2,9 +2,10 @@
 ## Turning awesome mathematical equations to powerful code.
 
 ### time_folding.py
-   Teach the concept of timefolding.
+    Teach the concept of timefolding.
 
 ### time_shifting.py
     Teach the concept of time shifting.
 
-
+## seatwork.py
+    Automate the simple seatwork
