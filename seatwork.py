@@ -10,21 +10,12 @@ import argparse
 def time_function(n):
     x_n = 0
     if(-1 >= n and -3 <= n):
-        x_n = 1 + n/3
+      x_n = 1 + n/3
     elif (n >= 0 and n<= 3):
         x_n = 1
     else:
         x_n = 0
     return x_n 
-
-def delay_shifting(n, k=0):
-    return n[k:]
-
-def advance_shifting(n, k=0):
-    return n[:k]
-
-def time_folding(n, k=0):
-    return n[-(k+1)::-1]
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Solve seatwork 1.")
@@ -39,16 +30,15 @@ if __name__ == "__main__":
     sample = row_range.sp
     for i in range(start,end):
         original_signal.append(time_function(i))
-    
-    print(f"original signal{original_signal}")
 
-    #1. First fold(n) and ten delay the resulting signal by four samples.
-    
-    folded_signal = time_folding(original_signal)
-    delay_four = delay_shifting(folded_signal,sample)
-    print(f'answer 1: {delay_four}')
+    #task one
+    folded_signal = original_signal[::-1]
+    task_one = folded_signal[sample:] + folded_signal[:len(folded_signal)+sample]
 
-    #First delay x(n) by four samples and then fold the resulting signal
-    delay_four = delay_shifting(original_signal,sample)
-    folded_signal = time_folding(delay_four)
-    print(f'answer 2: {folded_signal}')
+    #task two
+    delay_signal = original_signal[sample:] + original_signal[:len(original_signal)+sample]
+    task_two = delay_signal[::-1]
+
+    print(f"original signal:{original_signal}")
+    print(f"task one:{task_one}")
+    print(f"task two:{task_two}")
