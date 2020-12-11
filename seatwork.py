@@ -17,18 +17,19 @@ def time_function(n):
         x_n = 0
     return x_n 
 
-def time_shifting(n, k):
-    return time_function(n + k)
+def delay_time_shifting(n, k):
+    return n[k:]
+
+def advance_time_shifting(n, k):
+    return n[:k]
 
 def time_folding(n, k):
     return time_function((-1*n) + k)
 
 if __name__ == "__main__":
     time_function_list = list()
-    time_folding_list = list()
     for i in range(-3,4):
-        print(i)
-        time_function_list.append(time_function(i))
-        time_folding_list.append(time_folding(i,0))
-    print(f'original function {time_function_list}')
-    print(f'folding function {time_folding_list}')
+        time_function_list.append(time_folding(i,0))
+    p
+    res = time_shifting(time_function_list,3)
+    print(f'shifted function {res}')
