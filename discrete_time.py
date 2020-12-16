@@ -23,5 +23,10 @@ def d(n):
     return (1/3)*(a(n)+b(n)+c(n))
 
 if __name__ == "__main__":
+    item_one = list()
+    item_two = list()
     for i in range(-4,5):
-        print(f'b:x({i-1})={b(i)}')
+        item_one.append(c(i))
+        item_two.append(d(i))
+    print(f'y(n) = x(n+1) sequence:{item_one}')
+    print(f'y(n) = (1/3)*[x(n+1) + x(n) + x(n-1)] sequence:{item_two}')

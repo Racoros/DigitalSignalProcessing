@@ -15,4 +15,4 @@
     Add concept of scaling
 
 ##  discrete_time.py
-     
+     Manipulation of time signals
